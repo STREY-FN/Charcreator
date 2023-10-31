@@ -628,8 +628,8 @@ function MenuCreaPerso()
                                 SetEntityHeading(PlayerPedId(), 125.39)
                                 Wait(2500)
                                 DoScreenFadeIn(2500)
+                                DisplayRadar(true)
                                 ESX.ShowNotification('~b~Informations~s~\nVous avez crée votre personnage.')
-				DisplayRadar(true)
                             end
                         end
                     })
@@ -826,7 +826,7 @@ function MenuCreaPerso()
                     inPrincipal = false
                     RageUI.Button('Prénom', nil, {RightLabel = CreaPerso.Prenom and CreaPerso.Prenom or ''}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~prénom~s~ :', 15)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~prénom~s~ :', 15)
 
                             if Input ~= nil then
                                 if string.match(Input ,'%d+') then
@@ -839,7 +839,7 @@ function MenuCreaPerso()
                     })
                     RageUI.Button('Nom de famille', nil, {RightLabel = CreaPerso.NDF and CreaPerso.NDF or ''}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~nom de famille~s~ :', 15)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~nom de famille~s~ :', 15)
 
                             if Input ~= nil then
                                 if string.match(Input ,'%d+') then
@@ -852,7 +852,7 @@ function MenuCreaPerso()
                     })
                     RageUI.Button('Date de naissance', nil, {RightLabel = CreaPerso.DDN and CreaPerso.DDN or ''}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~date de naissance~s~ :', 15)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~date de naissance~s~ :', 15)
 
                             if Input ~= nil then
                                 if not IsDateGood(Input) then
@@ -865,7 +865,7 @@ function MenuCreaPerso()
                     })
                     RageUI.Button('Sexe', nil, {RightLabel = CreaPerso.Sexe and CreaPerso.Sexe or 'M/F'}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~sexe~s~ :', 0)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~sexe~s~ :', 0)
 
                             if Input ~= nil then
                                 if string.match(Input ,'%d+') then
@@ -878,7 +878,7 @@ function MenuCreaPerso()
                     })
                     RageUI.Button('Taille', nil, {RightLabel = CreaPerso.Taille and CreaPerso.Taille..'cm' or ''}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~taille~s~ :', 3)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~taille~s~ :', 3)
 
                             if Input ~= nil then
                                 if not string.match(Input ,'%d+') then
@@ -891,7 +891,7 @@ function MenuCreaPerso()
                     })
                     RageUI.Button('Lieu de naissance', nil, {RightLabel = CreaPerso.LDN and CreaPerso.LDN or ''}, true, {
                         onSelected = function()
-                            local Input = KeyboardInput('Entré votre ~b~lieu de naissance~s~ :', 15)
+                            local Input = ESX.KeyboardInput('Entré votre ~b~lieu de naissance~s~ :', 15)
 
                             if Input ~= nil then
                                 if string.match(Input ,'%d+') then
