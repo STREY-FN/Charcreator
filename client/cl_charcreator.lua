@@ -629,6 +629,7 @@ function MenuCreaPerso()
                                 Wait(2500)
                                 DoScreenFadeIn(2500)
                                 ESX.ShowNotification('~b~Informations~s~\nVous avez crée votre personnage.')
+				DisplayRadar(true)
                             end
                         end
                     })
