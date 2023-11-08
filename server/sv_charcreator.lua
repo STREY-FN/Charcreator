@@ -20,7 +20,7 @@ AddEventHandler('SetIdentity', function(NDF, Prenom, DDN, Sexe, Taille, LDN)
         xPlayer.addInventoryItem('water', 3)
     end
 
-    if xPlayer.addAccountMoney('money', 1500) then
-        xPlayer.addAccountMoney('money', 1500)
-    end
+    -- if xPlayer.addAccountMoney('money', 1500) then
+    --     xPlayer.addAccountMoney('money', 1500)
+    -- end
 end)

@@ -1,5 +1,5 @@
-RegisterNetEvent('skin:save')
-AddEventHandler('skin:save', function(skin)
+RegisterNetEvent('esx_skin:save')
+AddEventHandler('esx_skin:save', function(skin)
 	local xPlayer = ESX.GetPlayerFromId(source)
 	
 	MySQL.Async.execute('UPDATE users SET skin = @skin WHERE identifier = @identifier', {
@@ -8,7 +8,7 @@ AddEventHandler('skin:save', function(skin)
 	})
 end)
 
-ESX.RegisterServerCallback('skin:getPlayerSkin', function(source, cb)
+ESX.RegisterServerCallback('esx_skin:getPlayerSkin', function(source, cb)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	MySQL.Async.fetchAll('SELECT skin FROM users WHERE identifier = @identifier', {
